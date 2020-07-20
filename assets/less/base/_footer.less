@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@font-mont : 'Montserrat', sans-serif;
+@font-openSan : 'Open Sans', sans-serif;
+@color:#8262b5;
+@distance : 30px;
+
+.base(@font-size, @line-height,@color,@font-family) {
+    font-size: @font-size;
+    line-height: @line-height;
+    color: @color;
+    font-family: @font-family;
+}
+
+.footer {
+    background-color: #222222;
+    // height: 415px;  
+    footer {
+        padding-top: 60px;
+        hr {
+            margin-top: @distance;
+            color: #f7f7f7; 
+            height: 1px;
+            background-color: #888888;
+            border: none;
+            font-family: @font-openSan;
+        }
+        .title {
+            .base(16px,22px,#f7f7f7,@font-mont);
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+        .description {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            height: 131px;
+            font-weight: 400;
+            .base(14px,22px,#888888,@font-openSan);
+        }
+        .contact {
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #828282;
+            font-family: "Font Awesome";
+            margin-bottom: 50px;
+        }
+        .navigation {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            ul {
+                // width: 263px;
+                list-style: none;
+                .base(14px,35px,#888888,@font-openSan);
+                height: 226px;
+                padding-left: 0;
+                font-weight: 400;
+                a {
+                    text-decoration: none;
+                    color: #888888;
+                    &:hover {
+                        color: #f7f7f7;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .location {
+            width: 233px;
+            height: 114px;
+            .base(14px,34px,#888888,@font-openSan);
+            font-weight: 400;
+            span {
+                padding-left: 11px;
+            }
+            .addr-bottom {
+                padding-left: 25px;
+            }
+        }
+        .quote {
+            .base(14px,25px,#888888,@font-openSan);
+            font-weight: 400;
+            padding-top: 25px;
+            padding-bottom: 25px; 
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .heart {
+            color : red;
+        }
+        .payment {
+            .base(20px,22px,#888888,"Font Awesome");
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+}
+
+/*-------------------------------- Respinsive Media Styles --------------------------------*/
+
+/* For mobile phones: */
+@media only screen and (max-width: 767px) {
+    .footer {
+        
+        .quote {
+            text-align: center;
+            width: 100%;
+            margin-top: 0;
+            padding-top: 0 !important;
+        }
+        .payment {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1293px) {
+    .footer {
+        display: flex;
+        .description {
+            margin: 0 !important;
+            height: 100px !important;
+        }
+        .contact {
+            display: flex;
+            .item {
+                width: 15%;
+                margin: 0 !important;
+            }
+        }
+        .navigation {
+            display: flex;
+            .item {
+                width: 50%;
+                margin-bottom: 0 !important;
+            }
+        }
+        .location {
+            width: 100% !important;
+            height: 200px !important;
+            margin-top: 0 !important;
+            span {
+                padding-left: 11px;
+            }
+            .addr-bottom {
+                padding-left: 25px;
+            }
+            hr {
+                width: 100% !important;
+            }
+        }
+    }
+}

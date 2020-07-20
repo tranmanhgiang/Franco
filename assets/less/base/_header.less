@@ -1,0 +1,206 @@
+// @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@font-mont : 'Montserrat', sans-serif;
+@font-openSan : 'Open Sans', sans-serif;
+@color:#8262b5;
+@main-color: #212121;
+@main-font-size: 14px;
+@text-color: #000000;
+
+.header {
+    height: 115px;
+    font-size: 14px;
+    .top-menu {
+        background-color: @main-color;
+        font-size: @main-font-size;
+        color: #4b4b4b;
+        height: 50px;
+        line-height: 55px;
+        .welcome {
+            padding-left: 18px;
+        }
+        .setting, .login {
+            padding-right: 20px;
+        }
+    }
+
+    .main-menu {
+        height: 65px;
+        line-height: 81px;
+        .menu {
+            .nav {
+                justify-content: center;
+                a {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    &.icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+        a {
+            font-family: @font-mont;
+            color: @text-color;
+            font-weight: 700;
+            &.active {
+                color: #bba9d7;
+            }
+            &:hover {
+                color: #bba9d7;
+                text-decoration: none;
+            }
+            font-size : 14px;
+        }
+        .logo {
+            padding-left:30px;
+        }
+        .cart {
+            padding-right: 30px;
+        }
+
+    }
+}
+
+/*-------------------------------- Responsive Media Styles --------------------------------*/
+
+/* For mobile phones: */
+@media only screen and (max-width: 767px) {
+    .header {
+        height: 100px;
+        .top-menu {
+            height: 40%;
+            line-height: 20px;
+            .welcome {
+                width: 100%;
+                padding-left: 0;
+                text-align: center !important;
+            }
+            .setting, .login {
+                width: 50%;
+                padding-right: 0;
+                text-align: center;    
+            }
+        }
+        .main-menu {
+            position: relative;
+            display: flex;
+            .logo {
+                padding-left: 15px;
+                width: 50%;
+                img {
+                    width: 70%;
+                }
+            }
+            .menu {
+                width: 50%;
+                .nav {
+                    float: right;
+                    a {
+                        display: none;
+                        &.icon {
+                            display: block;
+                            font-size: 20px;
+                            padding-right: 0;  
+                        }
+                    }
+                }
+                .responsive {position: relative;}
+                .responsive {
+                    background-color: black;
+                    z-index: 2;
+                    width: 200px;
+                    a.icon {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                    a {
+                        color: white;
+                        float: none;
+                        display: block;
+                        text-align: left;
+                    }
+                }
+            }
+            .cart {
+                z-index: 1;
+                display: flex;
+                margin-right: 0;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                .fa-heart , .fa-shopping-cart{
+                    width: 45%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1293px) {
+    .header {
+        height: 100px;
+        .main-menu {
+            position: relative;
+            display: flex;
+            .logo {
+                margin-left: 0px;
+                width: 50%;
+                img {
+                    width: 100%;
+                }
+            }
+            .menu {
+                width: 100%;
+                .nav {
+                    float: right;
+                    margin-right: -100px;
+                    a {
+                        display: none;
+                        &.icon {
+                            display: block;
+                            font-size: 20px;
+                            padding-right: 0;  
+                        }
+                    }
+                }
+                .responsive {position: relative;}
+                .responsive {
+                    background-color: black;
+                    z-index: 2;
+                    width: 500px;
+                    display: block;
+                    a.icon {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                    a {
+                        color: white;
+                        float: none;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+            .cart {
+                z-index: 1;
+                display: flex;
+                margin-right: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                .fa-heart , .fa-shopping-cart{
+                    width: 45%;
+                }
+            }
+        }
+    }
+}
+

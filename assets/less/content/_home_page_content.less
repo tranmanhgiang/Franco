@@ -1,0 +1,428 @@
+/*<-----------------------------------3.1 Home_page_content--------------------------------------------->*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+@font-mont : 'Montserrat', sans-serif;
+@font-openSan : 'Open Sans', sans-serif;
+@font-pac : 'Pacifico', sans-serif;
+@color:#8262b5;
+@distance: 30px;
+
+.base(@font-size, @color, @font-family) {
+    font-size: @font-size;
+    color: @color;
+    font-family: @font-family;
+}
+// ads style
+.ads {
+    padding-top: 15px;
+    .ads-img3 {
+        margin-top:@distance;
+    }
+    .a1 {
+        position: relative;
+        .a1-child {
+            position: absolute;
+            right: 109px;
+            bottom: 201px;
+            font-weight: 400;
+            .base(30px, #000000, @font-pac);
+        }
+        .btn {
+            background-color: @color;
+            border: none;
+            border-radius: 0;
+            position: absolute;
+            right: 111px;
+            bottom: 152px;
+            font-weight: 400;
+            text-align: center;
+            width: 105px;
+            height: 40px;
+            line-height: 28px;
+            .base(14px, #ffffff, @font-mont);
+            &:hover {
+                padding-top: 5px;
+            }
+        }
+    }
+    .a2 {
+        position: relative;
+        .a2-child-top{
+            position: absolute;
+            left: 55px;
+            top: 85px;
+            letter-spacing: 3px;
+            font-weight: 400;
+            .base(16px, #616161, @font-mont);
+        }
+        .a2-child-bottom {
+            position: absolute;
+            left: 55px;
+            top: 110px;
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #000000;
+            font-weight: 1000;
+        }
+    }
+    .a3 {
+        position: relative;
+        .a3-child-top{
+            position: absolute;
+            left: 40px;
+            bottom: 190px; 
+            letter-spacing: 3px;
+            font-weight: 400;
+            .base(16px, #616161, @font-mont);
+        }
+        .a3-child-bottom {
+            position: absolute;
+            left: 40px;
+            bottom: 170px;
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #000000;
+            font-weight: 1000;
+        }
+        .btn {
+            background-color: @color;
+            border: none;
+            border-radius: 0;
+            position: absolute;
+            left: 40px;
+            bottom: 110px;
+            font-weight: 400;
+            text-align: center;
+            width: 105px;
+            height: 40px;
+            line-height: 28px;
+            .base(14px, #ffffff, @font-mont);
+            &:hover {
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+// product style
+.products {
+    margin-bottom: @distance; 
+    margin-top: 80px;
+    .title {
+        .small-title {
+            letter-spacing: 6px;
+            font-weight: 700;
+            .base(12px, @color, @font-mont);
+        }
+        .main-title {
+            letter-spacing: 2px;
+            font-weight: 700;
+            .base(24px, #000000, @font-mont);
+        }
+    }
+    hr {
+        width: 50px; 
+        color: @color; 
+        margin: @distance 0 50px 0;
+        height: 1px;
+        background-color: @color;
+        border: none;
+    }
+}
+
+.item {
+    margin-bottom: 50px;
+    .product-image {
+        position: relative;
+        &:hover {
+            transform: scale(0.95);
+            transition: 1s;
+        }
+        .add-to-cart {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            padding: 5px 10px;
+            background-color: #ffffff;
+            a {
+                text-decoration: none;
+                line-height: 26px;
+                font-weight: 400;
+                .base(12px, #424242, @font-mont);
+                &:hover {
+                    color: @color;
+                }
+            }
+        }
+    }
+    .description {
+        .product-name {
+            width: 267px;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 400;
+            font-family: @font-mont;
+            padding-top: 17px;
+        }
+        .rate {
+            color: #f8ba04;
+        }
+        .price {
+            opacity: 0.5;
+        }
+        .sale {
+            color: @color;
+        }
+    }
+}
+
+
+// blog style
+
+.blog {
+    width: 100%;
+    padding: 0 7%;
+    margin: 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+    .title {
+        font-weight: 700;
+        font-family: @font-mont;
+        text-align: center;
+        padding-top: 80px;
+        .small-title {
+            font-size: 12px;
+            letter-spacing: 6px;
+            color: @color;
+        }
+        .main-title {
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: #000000;
+        }
+        hr {
+            width: 50px; 
+            color: @color; 
+            margin-top: @distance;
+            margin-bottom: 50px;
+            height: 1px;
+            background-color: @color;
+            border: none;
+        }
+    }
+    .card {
+        margin-bottom: @distance;
+        .image-item {
+            position: relative;
+            .calendar {
+                position: absolute;
+                top: 25px;
+                left: 20px;
+                background-color: #a1d1dd;
+                color: #ffffff;
+                width: 60px;
+                height: 60px;
+                .date {        
+                    border: 1px solid #ffffff;
+                    width: 50px;
+                    height: 50px;
+                    margin: 5px;
+                    text-align: center;
+                    font-weight: 400;
+                    padding: 5px;
+                    .base(14px, #ffffff, @font-mont);
+                }
+            }
+        }
+        .card-body {
+            margin-top: 17px;
+        }
+        .card-title {
+            width: 302px;
+            height: 21px;
+            line-height: 20px;
+            margin-bottom: 25px;
+            padding: 0 5px;
+            font-weight: 400;
+            .base(16px, #000000, @font-mont);
+        }
+        a {
+            color: #000000;
+            &:hover {
+                text-decoration: none;
+                color: @color;
+            }
+        }
+        .card-text {
+            width: 321px;
+            height: 60px;
+            line-height: 22px;
+            padding: 0 5px;
+            font-weight: 400;
+            .base(14px, #424242, @font-openSan);
+        }
+        .info {
+            .love {
+                color: #424242;
+                cursor: pointer;
+            }
+            padding-bottom: 17px;
+            .comment {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+/*-------------------------------- Respinsive Media Styles --------------------------------*/
+
+/* For mobile phones: */
+@media only screen and (max-width: 767px) {
+
+    // ads style
+    .ads {
+        z-index: 1;
+        .a1 {
+            .a1-child {
+                right: 50px;
+                bottom: 90px;
+                font-size: 25px;
+            }
+            .btn {
+                right: 50px;
+                bottom: 50px;
+            }
+        }
+        .ads-right {
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-between;
+        }
+        .ads-img3 {
+            margin-top: 0;
+        }
+        .a2 {
+            height: 100px;
+            width: 40%;
+            .a2-child-top{
+                left: 10px;
+                top: 70px;
+                font-size: 14px;
+            }
+            .a2-child-bottom {
+                left: 10px;
+                bottom: 50px;
+            }
+        }
+        .a3 {
+            width: 57%;
+            img {
+                height: 200px;
+            }
+            .a3-child-top{
+                left: 20px;
+                bottom: 110px; 
+            }
+            .a3-child-bottom {
+                left: 20px;
+                bottom: 90px;
+            }
+            .btn {
+                left: 20px;
+                bottom: 50px;
+            }
+        }
+    }
+
+    // blog style
+    .blog {
+        .card {
+            .card-text {
+                width: 100%;
+                padding: 0;
+                font-weight: 400;
+                .base(14px, #424242, @font-openSan);
+            }
+            .info {
+                display: flex;
+                .comment {
+                    width: 30%;
+                }
+                .love {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1293px) {
+    // ads style
+    .ads {
+        padding-top: 15px;
+        .ads-img3 {
+            margin-top:@distance;
+        }
+        .a1 {
+            .a1-child {
+                right: 30px;
+            }
+            .btn {
+                right: 30px;
+            }
+        }
+        .a2 {
+            .a2-child-top{
+                left: 30px;
+                top: 85px;
+            }
+            .a2-child-bottom {
+                left: 30px;
+                top: 110px;
+            }
+        }
+        .a3 {
+            .a3-child-top{
+                left: 30px;
+                bottom: 190px;
+            }
+            .a3-child-bottom {
+                left: 30px;
+                bottom: 170px;
+            }
+            .btn {
+                left: 30px;
+                bottom: 110px;
+            }
+        }
+    }
+    .blog {
+        .card {
+            .card-text {
+                width: 100%;
+                padding: 0;
+                font-weight: 400;
+                .base(14px, #424242, @font-openSan);
+            }
+
+            .info {
+                .button {
+                    display: flex;
+                    align-items: center;
+                    .fa-comment, .fa-heart {
+                        padding-right: 5px;
+                    }
+                }
+                .comment {
+                    width: 30%;
+                }
+                .love {
+                    width: 30%;
+                }
+            }
+        }
+    }
+    
+}
