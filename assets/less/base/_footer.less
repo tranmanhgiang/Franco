@@ -15,9 +15,11 @@
 
 .footer {
     background-color: #222222;
-    // height: 415px;  
+    height: 468px;  
     footer {
         padding-top: 60px;
+        padding-left: 0;
+        padding-right: 0;
         hr {
             margin-top: @distance;
             color: #f7f7f7; 
@@ -27,13 +29,15 @@
             font-family: @font-openSan;
         }
         .title {
-            .base(16px,22px,#f7f7f7,@font-mont);
+            .base(16px,10px,#f7f7f7,@font-mont);
             letter-spacing: 1px;
             font-weight: 400;
+            padding-left: 5px;
         }
         .description {
-            margin-top: 30px;
+            margin-top: 22px;
             margin-bottom: 50px;
+            padding-left: 7px;
             height: 131px;
             font-weight: 400;
             .base(14px,22px,#888888,@font-openSan);
@@ -43,7 +47,8 @@
             letter-spacing: 3px;
             color: #828282;
             font-family: "Font Awesome";
-            margin-bottom: 50px;
+            padding-left: 5px;
+            margin-top: -30px;
         }
         .navigation {
             margin-top: 30px;
@@ -51,10 +56,12 @@
             ul {
                 // width: 263px;
                 list-style: none;
-                .base(14px,35px,#888888,@font-openSan);
+                .base(14px,30px,#888888,@font-openSan);
                 height: 226px;
                 padding-left: 0;
                 font-weight: 400;
+                margin-top: -10px;
+                margin-left: 5px;
                 a {
                     text-decoration: none;
                     color: #888888;
@@ -70,6 +77,7 @@
             height: 114px;
             .base(14px,34px,#888888,@font-openSan);
             font-weight: 400;
+            padding-left: 14px;
             span {
                 padding-left: 11px;
             }
@@ -77,23 +85,25 @@
                 padding-left: 25px;
             }
         }
-        .quote {
-            .base(14px,25px,#888888,@font-openSan);
-            font-weight: 400;
-            padding-top: 25px;
-            padding-bottom: 25px; 
-            a {
-                text-decoration: none;
-                color: white;
+        .footer-bottom {
+            .quote {
+                .base(14px,25px,#888888,@font-openSan);
+                font-weight: 400;
+                padding-top: 4px;
+                padding-left: 23px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
             }
-        }
-        .heart {
-            color : red;
-        }
-        .payment {
-            .base(20px,22px,#888888,"Font Awesome");
-            padding-top: 25px;
-            padding-bottom: 25px;
+            .heart {
+                color : red;
+            }
+            .payment {
+                .base(22px,22px,#888888,"Font Awesome");
+                padding-top: 4px;
+                padding-bottom: 25px;
+            }
         }
     }
 }

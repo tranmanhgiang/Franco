@@ -1,5 +1,5 @@
-// @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 @font-mont : 'Montserrat', sans-serif;
 @font-openSan : 'Open Sans', sans-serif;
@@ -10,7 +10,7 @@
 
 .header {
     height: 115px;
-    font-size: 14px;
+    // font-size: 14px;
     .top-menu {
         background-color: @main-color;
         font-size: @main-font-size;
@@ -18,22 +18,29 @@
         height: 50px;
         line-height: 55px;
         .welcome {
-            padding-left: 18px;
+            padding-left: 30px;
+            font-size: 16px;
+            font-family: "Font Awesome";
         }
-        .setting, .login {
+        .login {
             padding-right: 20px;
+            font-size: 14px;
+        }
+        .setting {
+            padding-right: 36px;
+            font-size: 14px;
         }
     }
 
     .main-menu {
         height: 65px;
-        line-height: 81px;
+        line-height: 80px;
         .menu {
             .nav {
                 justify-content: center;
                 a {
-                    padding-left: 30px;
-                    padding-right: 30px;
+                    padding-left: 31px;
+                    padding-right: 25px;
                     &.icon {
                         display: none;
                     }
@@ -57,7 +64,11 @@
             padding-left:30px;
         }
         .cart {
-            padding-right: 30px;
+            padding-right: 0;
+            .fa-heart , .fa-shopping-cart{
+                font-size: 20px;
+            }
+
         }
 
     }
