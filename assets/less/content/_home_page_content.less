@@ -14,6 +14,7 @@
     color: @color;
     font-family: @font-family;
 }
+
 // ads style
 .ads {
     padding-top: 15px;
@@ -59,6 +60,7 @@
             width: 103%;
             margin-top: -2px;
             margin-left: 12px;
+            height: 200px;
         }
         .a2-child-top{
             position: absolute;
@@ -84,6 +86,7 @@
             width: 103%;
             margin-top: 30px;
             margin-left: 12px;
+            height: 330px;
         }
         .a3-child-top{
             position: absolute;
@@ -124,7 +127,7 @@
 
 // product style
 .products {
-    margin-bottom: @distance; 
+    margin-bottom: @distance;
     margin-top: 75px;
     padding-left: 0;
     padding-right: 0;
@@ -321,7 +324,7 @@
 
 /*-------------------------------- Respinsive Media Styles --------------------------------*/
 
-/* For mobile phones: */
+/* Large Mobile: 480px */
 @media only screen and (max-width: 767px) {
 
     // ads style
@@ -349,6 +352,11 @@
         .a2 {
             height: 100px;
             width: 40%;
+            img {
+                width: 100%;
+                margin-top: 0px;
+                margin-left: -7px;
+            }
             .a2-child-top{
                 left: 10px;
                 top: 70px;
@@ -359,10 +367,14 @@
                 bottom: 50px;
             }
         }
+        
         .a3 {
             width: 57%;
             img {
                 height: 200px;
+                width: 100%;
+                margin-top: 0;
+                margin-left: 0px;
             }
             .a3-child-top{
                 left: 20px;
@@ -375,6 +387,18 @@
             .btn {
                 left: 20px;
                 bottom: 50px;
+            }
+        }
+    }
+
+    // products style
+    .item {
+        .product-image {
+            img {
+                width: 97%;
+                margin-left: 6px;
+                height: 100%;
+                margin-top: -3px;
             }
         }
     }
@@ -401,6 +425,49 @@
     }
 }
 
+/* Small Mobile: 320px */
+@media only screen and (max-width: 479px) {
+    .ads {
+        .a1 {
+            img {
+                margin-left: 0;
+                width: 101%;
+            }
+            .a1-child {
+                right: 30px;
+            }
+            .btn {
+                right: 30px;
+            }
+        }
+        .a2 {
+            img {
+                width: 100%;
+                margin-top: 0;
+                margin-left: 0;
+            }
+            .a2-child-top{
+                left: 5px;
+                top: 60px;
+                .base(14px, #616161, @font-mont);
+            }
+            .a2-child-bottom {
+                left: 5px;
+                top: 105px;
+                font-size: 14px;
+            }
+        }
+        .a3 {
+            img {
+                width: 99%;
+                margin-left: 5px;
+            }
+            
+        }
+    }
+}
+
+/* Tablet Device: 768px */
 @media only screen and (min-width: 768px) and (max-width: 1293px) {
     // ads style
     .ads {
@@ -417,7 +484,7 @@
             }
         }
         .a2 {
-            .a2-child-top{
+            .a2-child-top {
                 left: 30px;
                 top: 85px;
             }
@@ -441,6 +508,14 @@
             }
         }
     }
+    .item {
+        .product-image {
+            img {
+                margin-left: 0;
+            }
+        }
+    }
+    //blog style
     .blog {
         .card {
             .card-text {
@@ -467,5 +542,4 @@
             }
         }
     }
-    
 }

@@ -85,6 +85,9 @@
                 padding-left: 25px;
             }
         }
+        .last-hr {
+            margin-top: -120px !important;
+        }
         .footer-bottom {
             .quote {
                 .base(14px,25px,#888888,@font-openSan);
@@ -108,33 +111,21 @@
     }
 }
 
-/*-------------------------------- Respinsive Media Styles --------------------------------*/
+/*-------------------------------- Responsive Media Styles --------------------------------*/
 
-/* For mobile phones: */
-@media only screen and (max-width: 767px) {
-    .footer {
-        
-        .quote {
-            text-align: center;
-            width: 100%;
-            margin-top: 0;
-            padding-top: 0 !important;
-        }
-        .payment {
-            display: none;
-        }
-    }
-}
-
+/* For mobile phones and Tablet: */
 @media only screen and (max-width: 1293px) {
     .footer {
         display: flex;
+        height: fit-content;
         .description {
             margin: 0 !important;
             height: 100px !important;
         }
         .contact {
             display: flex;
+            margin-top: 0 !important;
+            margin-bottom: 25px;
             .item {
                 width: 15%;
                 margin: 0 !important;
@@ -142,6 +133,7 @@
         }
         .navigation {
             display: flex;
+            height: 150px;
             .item {
                 width: 50%;
                 margin-bottom: 0 !important;
@@ -149,8 +141,8 @@
         }
         .location {
             width: 100% !important;
-            height: 200px !important;
-            margin-top: 0 !important;
+            height: 350px !important;
+            margin-top: 10px !important;
             span {
                 padding-left: 11px;
             }
@@ -160,6 +152,14 @@
             hr {
                 width: 100% !important;
             }
+        }
+        .quote {
+            text-align: center;
+            width: 100%;
+            line-height: 98px !important;
+        }
+        .payment {
+            display: none;
         }
     }
 }
